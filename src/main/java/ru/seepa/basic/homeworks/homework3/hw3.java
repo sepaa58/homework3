@@ -26,8 +26,8 @@ public class hw3 {
             case 3:
                 int cubeSize = rand.nextInt(5 - 2 + 1) + 2;
                 System.out.println(cubeSize);
-                int[][] zeroingCube = genArr(cubeSize, cubeSize);
-                zeroing(zeroingCube);
+                int[][] zeroingSquare = genArr(cubeSize, cubeSize);
+                zeroing(zeroingSquare);
                 break;
             case 4:
                 int sizea = rand.nextInt(5 - 2 + 1) + 2;
@@ -82,16 +82,16 @@ public class hw3 {
         }
     }
 
-    public static void zeroing(int[][] zeroingCube) {
+    public static void zeroing(int[][] zeroingSquare) {
         System.out.println("Результат работы - ");
-        for (int i = 0; i < zeroingCube.length; i++) {
-            zeroingCube[i][i] = 0;
-            System.out.println(Arrays.toString(zeroingCube[i]));
+        for (int i = 0; i < zeroingSquare.length; i++) {
+            zeroingSquare[i][i] = 0;
+            System.out.println(Arrays.toString(zeroingSquare[i]));
         }
     }
 
     public static int findMax(int[][] array) {
-        int max = -10;
+        int max = array[0][0];
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
                 if (array[i][j] > max) {
